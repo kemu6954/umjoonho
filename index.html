@@ -24,7 +24,7 @@
         margin: 0px;
         font-size: 25px;
       }
-      ol {
+      .grid ol {
         border-right: 1px black solid;
         width: 100px;
         padding: 20px;
@@ -45,7 +45,18 @@
         padding-left: 0px;
         padding-top: 0px;
       }
-
+      @media(max-width:800px){
+        .grid{
+          display:block;
+      }
+      .grid ol {
+        border-right: none;
+      }
+        h1 {
+          border-bottom: none;
+          margin-bottom: 0px;
+        }
+      }
     </style>
   </head>
 
@@ -54,22 +65,40 @@
     <div class="grid">
 
           <ol>
-            <li><a href="info.html" > <strong>INFO</strong></a><br></li>
-            <li><a href="price.html"> <strong>PRICE</strong></a><br></li>
-            <li><a href="cs.html" ><strong> CS</strong></a><br></li>
+            <strong>
+              <li><a href="info.html" > INFO</a><br></li>
+              <li><a href="price.html"> PRICE</a><br></li>
+              <li><a href="cs.html" > CS</a><br></li>
+              <input type="button" value="야간모드" onclick="
+              var target = document.querySelector('body');
+              if(this.value === '야간모드'){
+                target.style.backgroundColor='black';
+                target.style.color ='white';               
+
+                this.value ='주간모드';
+              }else{
+                target.style.backgroundColor='white';
+                target.style.color='black';
+
+                this.value='야간모드';
+              }
+            ">
+            </strong>
           </ol>
           <div>
-          <br><h2>엄준호 [umjoonho]</h2>
-           <p>
-             <br>엄준호는 우리들의 친구이기도 하지만 그와 동시에 <strong>우리들의 <u>천적</u>이기도 합니다.</strong>
-             <br>하지만 우리가 먼저 그를 자극하지만 않는다면 그도 우리에게 해가 될 만한 일을 벌이지는 않을 것입니다.
-             <br>그리고, 우리회사는 이에 물음을 던졌습니다. <br>'어떻게 하면 더 싱싱하고 맛좋은 엄준호를 만나볼 수 있을까?'
-             <br>물음에 대한 해결책은 그다지 멀리 있진 않았지만 그것을 찾기까지에는 10년도 더한 시간이 들었습니다.
-           </p>
-           <p>
-             <br>하루평균 8시간에 달하는 연구시간을 엄준호에게 투자했고, 약 5천원 정도의 자원이 연구 도중 손실되었습니다.
-             <br>그렇게 연구를 시작한지 4년이 지날 즈음 드디어 저희 회사는 특제 기술 JUJUCUT™ 을 발명해냈습니다.
-             <br>JUJICUT™ 은 엄준호의 특정 부위를 절단하여 생산량을 늘려주고 소비자분들께 좀 더 좋은 사용후기를 도출해냈습니다.
+          <br><h2>엄준호 [umjunho]</h2>
+          <div class="main-text">
+             <p>
+               <br>엄준호는 우리들의 친구이기도 하지만 그와 동시에 <strong>우리들의 <u>천적</u>이기도 합니다.</strong>
+               <br>하지만 우리가 먼저 그를 자극하지만 않는다면 그도 우리에게 해가 될 만한 일을 벌이지는 않을 것입니다.
+               <br>그리고, 우리회사는 이에 물음을 던졌습니다. <br>'어떻게 하면 더 싱싱하고 맛좋은 엄준호를 만나볼 수 있을까?'
+               <br>물음에 대한 해결책은 그다지 멀리 있진 않았지만 그것을 찾기까지에는 10년도 더한 시간이 들었습니다.
+             </p>
+             <p>
+               <br>하루평균 8시간에 달하는 연구시간을 엄준호에게 투자했고, 약 5천원 정도의 자원이 연구 도중 손실되었습니다.
+               <br>그렇게 연구를 시작한지 4년이 지날 즈음 드디어 저희 회사는 특제 기술 JUJUCUT™ 을 발명해냈습니다.
+               <br>JUJICUT™ 은 엄준호의 특정 부위를 절단하여 생산량을 늘려주고 소비자분들께 좀 더 좋은 사용후기를 도출해냈습니다.
+           </div>
           <img src="umjoon.jpg" width="300">
           <br><a href="https://www.facebook.com/profile.php?id=100022673691708" style="color:#fe558e" title="클릭하면 facebook으로 이동합니다">엄준호의 공식 SNS계정 바로가기</a>
         </div>
